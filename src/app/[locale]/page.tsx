@@ -4,7 +4,7 @@ import { getDictionary } from "@/lib/i18n";
 
 export async function generateStaticParams() {
     return [
-        { locale: 'pt-BR' },
+        { locale: 'pt' },
         { locale: 'en' }
     ]
 }

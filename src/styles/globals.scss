@@ -1,0 +1,46 @@
+@import './typography/typography';
+@import './colors.scss';
+@import './variables.scss';
+
+:root {
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: 'Rubik', 'Unbounded', sans-serif;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  background: $white;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+  font-family: 'Rubik', 'Unbounded', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1128px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}

@@ -1,0 +1,25 @@
+@mixin body1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin body2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin body1-mobile {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+}
+
+@mixin body2-mobile {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.005em;
+}

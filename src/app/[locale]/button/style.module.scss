@@ -1,0 +1,59 @@
+@import '../../../styles/typography/typography.scss';
+@import '../../../styles/colors.scss';
+
+.button {
+  @include general-button;
+
+  padding: 16px 32px;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    text-decoration: none;
+    cursor: default;
+    opacity: 0.6; 
+  }
+
+  &-contained {
+    background-color: $uni;
+    color: $white;
+
+    &-icon {
+      filter: invert(91%) sepia(99%) saturate(34%) hue-rotate(256deg)
+        brightness(108%) contrast(100%);
+    }
+
+    &:hover {
+      background-color: darken($uni, 10%); 
+    }
+
+    &:disabled {
+      background-color: $mediumLight;
+    }
+  }
+
+  &-naked {
+    background-color: transparent;
+    color: $uni;
+
+    &-icon {
+      filter: invert(20%) sepia(89%) saturate(805%) hue-rotate(341deg) brightness(98%) contrast(93%);
+    }
+
+    &:hover {
+      text-decoration-color: $uni;
+      color: darken($uni, 10%); 
+    }
+  }
+}

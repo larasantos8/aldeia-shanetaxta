@@ -1,0 +1,30 @@
+@import "../../../../../styles/variables.scss";
+
+.item{
+  margin-bottom: 41px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0 28px;
+  border-bottom: 1px solid $border;
+  cursor: pointer;
+}
+
+.title{
+  @include brand-title;
+  color: $uni;
+}
+
+.icon{
+  filter: invert(21%) sepia(12%) saturate(7481%) hue-rotate(347deg) brightness(95%) contrast(90%);
+}
+
+.content{
+
+}
+
+@media (max-width: $breakpoint-tablet) {
+}

@@ -3,7 +3,7 @@ import { getLocale, type Locale } from '@/lib/i18n';
 import styles from './LanguageSwitcher.module.css';
 
 const LOCALES = {
-    'pt-BR': 'Português',
+    'pt': 'Português',
     'en': 'English'
 } as const;
 

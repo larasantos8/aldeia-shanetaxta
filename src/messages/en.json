@@ -1,4 +1,122 @@
 {
-    "welcome": "Hi, how are you?",
-    "appDescription": "Welcome to my Next.js application!"
+  "HomePage": {
+    "sliderBanners": {
+      "title1": "SHANE TAXTÁ KAYA: WOMEN’S VILLAGE",
+      "title2": "SHUAYNE 103 YEARS, AUGUST 05 TO 13, 2023",
+      "title3": "CONTRIBUTE: HEART OF THE VILLAGE PROJECT"
+    },
+    "culture": {
+      "title": "DISCOVER THE CULTURE",
+      "card1": "Discover the Origin of the Shanenawa People",
+      "card2": "Resistance and Land Struggle: Time Frame and Demarcation",
+      "card3": "Spirituality and the Consecration of Forest Medicines"
+    }
+  },
+  "AboutPage": {
+    "title": "Shane Tatxa Kaya, the True Root of Blue Bird", 
+    "alt": "Indigenous person with face paint",
+    "description": {
+      "paragraph1": "The new village Shane Tatxa Kaya, already known as the Village of Shanenawa Women, came as a mission offered by spirituality to the three sister leaders of the community. Pekãshaya Shanenawa, Sapuani Shanenawa, and Mukani Shanenawa received from their parents the hereditary teachings, traditionally kept by men, so that they would always have the necessary autonomy to continue the work of cultural strengthening and protecting the rights of the women of their people.",
+      "paragraph2": "'My sisters and I want to set an example for other indigenous villages, both within and outside our people, that we women are capable and can develop various activities, including management and social organization, such as the cacicado, a position held by men in the cosmology of the Pano Peoples.' Pekãshaya Shanenawa (Cacica and Co-founder).",
+      "paragraph3": "",
+      "paragraph4": "'My parents have always suffered prejudice for having only daughters and not having any sons to carry on the hereditary teachings. However, my parents always say they are eternally grateful for having us, their daughters, because the Great Spirit blessed them by making a difference. They have always fought to ensure that we never have to lower our heads for being women, and they want to strengthen us more each day, maintaining a firm commitment to making a difference within our culture.' Mukani Shanenawa (Shaman - Co-founder)"
+    }
+  },
+  "HistoryPage": {
+    "title": "GET TO KNOW THE HISTORY AND ORIGIN OF THE SHANENAWA PEOPLE",
+    "description": {
+      "paragraph1": "The history of the Shanenawa people is common to those experienced by most of the indigenous populations in Acre. At the beginning of the 20th century, they were victims of the rapid and violent occupation of the region due to the extraction of caucho and rubber.",
+      "paragraph2": "In the process of developing the regional economy, the Shanenawa were initially allocated as labor to provide meat and other foodstuffs to the rubber plantation workers, later being integrated into the actual extraction of rubber and the activity of taming the 'ferocious' Indians of the upper Envira river.",
+      "paragraph3": "After some displacements, the Shanenawa came to live in a portion of land that was later ratified under the name Katukina/Kaxinawa. This was due to a mistake, as they were confused with Katukina Indians and called as such. Fearful of losing their rights to their lands, considering the whole history of violence and injustice they suffered, the Shanenawa decided not to correct the misunderstanding. Linguistic studies carried out in the 1990s prove this situation, since the Shanenawa language belongs to the Pano family and not Katukina.",
+      "paragraph4": "The name 'Shanenawa' etymologically is composed of the forms shane (a type of blue bird) and nawa (‘foreign’ people). Thus, they would be the 'blue bird people'. The Shanenawa say that this is a bird that is difficult to be seen, but its occurrence is a sign of conflict, war between indigenous groups."
+    },
+    "language": {
+      "paragraph1": "The Shanenawa language belongs to the Pano family and is spoken mainly by the elders. Despite having been banned at the time they worked on the rubber plantations, the Shanenawa never forgot it.",
+      "paragraph2": "Young people and children, although they understand their parents' language, talk exclusively in Portuguese among themselves. Despite this, it is noticeable that among the Shanenawa some older members, allied to young people, show strong engagement in the struggle for the maintenance of the people's cultural identity, and always seek to communicate in Shanenawa.",
+      "paragraph3": "In addition, the schools in the communities have been conceived as a space for learning the language, in opposition to the schooling process in the city, which ignores not only the language, but the indigenous ways of life. [Gláucia Vieira Cândido, 2004; Project 'Strengthening the Shanenawa culture of the Nova Vida village', sent by the Nova Vida village to the Culturas Indígenas Award - Xicão Xukuru Edition, 2008]"
+    },
+    "food": {
+      "farming": {
+        "title": "Farming",
+        "paragraph": "The Shanenawa's farm is very diverse, having a large variability of species and varieties related to each type of food. They mainly plant corn, banana, cassava, yam, pumpkin, sweet potato and rice. In some cases, the farm is jointly cut down and after burning it is divided by the nuclear families to carry out cultivation. [Carlos Antônio Bezerra Salgado, 2005]"
+      },
+      "hunting": {
+        "title": "Hunting",
+        "paragraph": "Hunting in the region is scarce, but when possible it is restricted to the capture of small animals and birds, such as lizards, frogs, among others. There are some different strategies for acquiring meat: traditional hunting practices, raising small domestic animals - occasionally the slaughter of a cow, more common for parties or celebrations – or the purchase of fish or pork and beef in the city. At different times, expeditions are made to places near the Envira river, where they previously lived, to promote hunting and fishing. Among the Shanenawa, dogs are no longer used to assist in hunting, which has gradually improved the approach to hunting. Each village has its own barreiros (places where animals go to drink water mainly in the rainy season and lick the banks in search of salt). Hunting is more promising in the rainy season, especially in more or less short dry spells. In these times the tracks are easier to identify and there is also an abundance of food. [Gláucia Vieira Cândido, 2004; Carlos Antônio Bezerra Salgado, 2005]"
+      },
+      "fishing": {
+        "title": "Fishing",
+        "paragraph": "Fishing is also part of their customs, but as the fish of the Envira river are scarce in the area where they live, this activity has been greatly reduced at certain times of the year. There are reports, however, that the leaders have been in contact with Food Engineering specialists in order to execute a project that makes the Envira return to being a fishy river. In fishing, the cast net is the preferred instrument, but sometimes they use timbó, which is a substance thrown into the river to make the fish get stunned and rise to the surface, where they will be easily collected. [Gláucia Vieira Cândido, 2004]"
+      },
+      "caicuma": {
+        "title": "Caicuma",
+        "paragraph": "Regarding drinks, the most appreciated by the Shanenawa is caicuma (a term of probable origin in Nheengatu) which can be from cassava or banana. The preparation of the latter is very simple: after cooking and mashing the banana with water, just let it ferment for a short time. The cassava caicuma, besides going through the cooking process, is chewed, strained and fermented for at least 24 hours. The alcoholic content of these two drinks is quite low, as they are consumed immediately after preparation. However, the consumption of sour caicuma is also common, which has a high alcoholic content, since its fermentation time is more than three days. [Gláucia Vieira Cândido, 2004]"
+      },
+      "dietaryRestrictions": {
+        "title": "Dietary Restrictions",
+        "paragraph": "Even though they no longer do it regularly, some periods of the Shanenawa's life are strongly marked by restrictions to certain foods, such as pregnant women and those who were trained to be shamans. The latter spent a long period in the forest, and on this occasion, which lasted a year and six months, they ate only roasted corn and drank corn caicuma. When they drank umi (forest vegetable), they ate light things, like corn, banana and roasted cassava. The vegetable teaches how to cure a disease and from then on they were forming definitive shamans in the community. Traditionally, when a woman is pregnant, she tries to eat banana, cassava, flour, yam, potatoes, meat, fish, papaya and other fruits. She only avoids eating tougher meats. During breastfeeding she reinforces her diet with corn caicuma, cassava, banana and various broths. It is part of their customs not to eat vulture meat, sloth, mambira, mucura, snake and some fruits of the bush. Many people do not eat sheep meat and the older ones do not eat beef, as they say it gives headache and fever, as the cattle is raised in the sun of the field. [Carlos Antônio Bezerra Salgado, 2005]"
+      },
+      "handicraft": {
+        "title": "Handicraft",
+        "paragraph": "Men have a custom of making decorative sets of bow and arrow to sell outside the municipality. Women make necklaces, bracelets, skirts, hats, baskets and ceramic vases. The production is intermediated for trade purposes by the Shanenawa Association of the Morada Nova Village (ASAMN), with the aim of assisting them in the distribution and sale of these products."
+      }
+    }
+  },
+  "ResistancePage": {
+    "title": "STRUGGLE FOR LAND AND RESISTANCE OF THE SHANENAWA PEOPLE",
+    "description": {
+      "paragraph1": "At the time they arrived to explore the Acrean lands, the rubber tappers came across a diversity of indigenous people in the region, but they were not interested in the linguistic and cultural distinctions they presented. With a few names, all indigenous populations were baptized, often making the same denomination fall on completely different groups.",
+      "paragraph2": "With the construction of villages in territories that were once inhabited by indigenous populations, the Shanenawa lost their space and had no place to establish themselves. They had to work in rubber collection as employees of the whites to survive. Even so, these 'owners of the rubber plantations', when they had no more services, expelled them from the land. And this happened everywhere the group arrived, as they could only stay in the rubber plantation while there was work.",
+      "paragraph3": "The Shanenawa say they have insisted many times with the authorities of the State of Acre regarding the need to have a place to live. They argued that their people were dying from diseases, hunger and even at the behest of the 'bosses' when they resisted the order to leave. After some time, they found a document that proved their occupation on the land - according to a report by CIMI (1976). The document in question says they were living on a piece of land that belonged to the government – the government had bought the rubber plantation and made several donations, including to the caboclos. It is a provisional document that was replaced by a land title when the demarcation of the Indigenous Land was carried out.",
+      "paragraph4": "After some time of contact with the settlers in the region, the Shanenawa discovered that they were being considered Katukina and not Shanenawa, their original name. The mistake seems to have originated from a sign placed in the village, facing the Envira river, in which the group is identified by the name of Katukina. Later, they decided to check what name was on the land document and discovered that there was also the name Katukina recorded there.",
+      "paragraph5": "Noticing the mistake, some Shanenawa even sought the authorities, but were informed that if they insisted that they were not Katukina, they would end up losing the land. Given all the difficulties they have been through, they judged that the error of the ethnonyms did not deserve further concern, because what they really needed was the land. [Maria Sueli de Aguiar, 1992; Carlos Antônio Bezerra Salgado, 2005]"
+    }
+  },
+  "SpiritualityPage": {
+    "title": "THE STRUGGLE FOR LAND AND THE RESISTANCE OF THE SHANENAWA PEOPLE",
+    "description": {
+      "paragraph1": "The belief of the Shanenawa in the existence of forest spirits, the jusin, is observed very firmly. These spirits are outside of nature and human, being, therefore, supernatural and superhuman. There are the good jusin and the evil ones. The main one is called jusin tsaka which, as the Indians report, has the shape of a monstrous animal that destroys and burns everything wherever it goes. The Shanenawa say that it is very common to find the footprints of the jusin tsaka in the mornings, as the spirit only 'attacks' at night. Adults use the figure of this jusin to scare children and make them obey.",
+      "paragraph2": "The Shanenawa make use of ayahuasca, (called umi in the indigenous language), a drink based on a type of vine and hallucinogenic leaves that causes visions. Through these visions they communicate with the spirits of their ancestors and get help to solve their problems. The umi is also used as medicine, as they believe that by ingesting it they will have health for the body.",
+      "paragraph3": "The Indians claim that there is no shaman in the community. On the other hand, herbal medicine is very rich and has remedies for almost everything. In the fauna, the most sought-after remedy is the poison or vaccine of the frog. The Indians apply the substance, which is collected from a rare species of frog, the phyllomedusa bicolor, and apply it on the arms at three points made with fire. In a few minutes they vomit everything they have in their stomach and thus renew their strength and disposition for work. Frog's venom is also associated with the medical property of ending laziness and panema, a term borrowed from Nheengatu, which means lack of luck in hunting.",
+      "paragraph4": "After the beginning of intense contacts with non-indigenous people, many Shanenawa began to manifest beliefs in religions such as the Catholic. [Gláucia Vieira Cândido, 2004]"
+    },
+    "games": {
+      "title": "The Mariri and the Shanenawa Games",
+      "description": {
+        "paragraph1": "Still regarding traditional rituals, there are records of very interesting aspects. One of them is the mariri, a word borrowed from Nheengatu to designate a typical event among the Shanenawa and among other Pano populations. The mariri does not have a date to happen, however, it is more common to occur in the Acrean summer, a period of rare rains, which goes from April to September, thus facilitating the transit in the villages due to the absence of mud. Any member of the group can participate in the dance, as long as they rehearse the songs taught by their ancestors. For the mariri, the members paint themselves with annatto and jenipapo and wear a skirt made with strips of envira. In times of mariri, many other events are recorded such as the act of disguising oneself as jusin tsaka, which the Indians interpret as 'werewolf'. Usually, one of the men covers himself with tree branches and banana leaves and enters among the dancers, frightening everyone.",
+        "paragraph2": "Another activity that occurs within the events of the mariri is the 'sugar cane game'. This unfolds around one of the men who disputes a piece of sugar cane with one or more women. Women are allowed to use all their strength to take the piece of cane from the man, but they cannot act with physical violence, only verbal.",
+        "paragraph3": "Another very appreciated game is the 'greasy pole'. The Indians pass grease on a very long pole stuck in the ground in the form of a stake and, at the top, put a prize. Whoever manages to reach the top without sliding, takes the prize. It is not known if the Indians learned the game from the non-indigenous or vice versa. It is certain, however, that the 'greasy pole' can be seen in various regions of Brazil and also in Peru on the occasion of the 'striking of Judas'. Thus, probably the second explanation is the most likely.",
+        "paragraph4": "Among other activities, the Shanenawa still practice archery and swimming as competition, customs very appreciated and maintained with pride by this people. They also practice soccer. For this sport, they have small fields in the villages that are heavily used on Saturdays. They play games with teams formed by players from their own villages or, on festive occasions, they face teams from other ethnic groups. [Gláucia Vieira Cândido, 2004]"
+      }
+    },
+    "alt1": "Man receiving Rapé blow",
+    "alt2": "Man receiving Kambo application",
+    "alt3": "Woman receiving Rapé blow"
+  },
+  "ProjectPage": {
+    "title": "GET TO KNOW AND BE PART OF THE SHANE TAXTA KAYA VILLAGE HEART PROJECT",
+    "description": {
+      "paragraph1": "The Shane Tatxa Kaya Village Heart Project aims to raise funds and connections with partners, establishing the food security of the community, structuring the Village and collective development through the collective financing of movements in the Shanenawa Women's Village. Every donation will be reverted into actions for the construction of the village, being applied in various areas, ensuring a prosperous life within the forest, strengthening the culture and tradition of the True Root of the Blue Bird. Be a supporter of the Shanenawa Women's Village and connect even more with the cause!",
+      "paragraph2": "• Discount on village products",
+      "paragraph3": "• Discount on Experiences and Ceremonies",
+      "paragraph4": "• Online consultations with Pajé Mukani Shanenawa.",
+      "paragraph5": "• Sending of medicines and baths",
+      "paragraph6": "• Monthly online meeting with the leaders to share stories, experiences and traditional culture. (Storytelling Pajé Shuayne, Female Empowerment with the Leaders, Traditional Shanenawa Maternity and Prenatal with Dona Txirá, Spirituality and opening of ways...)"
+    },
+    "alt1": "Children of the village"
+  },
+  "Menu": {
+    "home": "Home",
+    "about": "About the village",
+    "experiences": "Experiences in the forest",
+    "history": "History",
+    "resistance": "Resistance and struggle",
+    "spirituality": "Spirituality",
+    "project": "Heart of the village project",
+    "gallery": "Photo gallery"
+  },
+  "Voices": {
+    "title": "Voices shanenawa",
+    "description": "Listen to the playlist with podcast episodes and songs of the Shanenawa people on Spotify."
+  }
 }

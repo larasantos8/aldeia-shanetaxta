@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-const locales = ['pt-BR', 'en']
-const defaultLocale = 'pt-BR'
+const locales = ['pt', 'en']
+const defaultLocale = 'pt'
 
 function getLocale(request: NextRequest) {
     // Check if there's a locale in the pathname
@@ -17,7 +17,7 @@ function getLocale(request: NextRequest) {
     const acceptLanguage = request.headers.get('accept-language')
     if (acceptLanguage) {
         const headerLocale = acceptLanguage.split(',')[0].split('-')[0]
-        if (headerLocale === 'pt') return 'pt-BR'
+        if (headerLocale === 'pt') return 'pt'
         if (headerLocale === 'en') return 'en'
     }
 

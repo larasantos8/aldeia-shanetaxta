@@ -1,0 +1,23 @@
+@import "../../../styles/variables.scss";
+
+.content {
+  @include content;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 100px;
+
+  p{
+    @include body-description;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .description {
+    margin-bottom: 40px;
+  }
+}

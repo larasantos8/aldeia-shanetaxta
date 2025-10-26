@@ -1,0 +1,41 @@
+@import './typography/typography.scss';
+
+@mixin brand-title {
+  @include heading3-brand;
+  color: $black;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include heading4-brand;
+  }
+}
+
+@mixin body-description {
+  @include body1;
+  color: $black;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include body2;
+  }
+}
+
+@mixin principal-image {
+  width: 1012px;
+  height: 569px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 288px;
+    height: 161.93px;
+  }
+}
+
+@mixin content {
+  max-width: 789px;
+  width: 90%;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: unset;
+    width: unset;
+    margin: unset;
+  }
+}
