@@ -1,25 +1,20 @@
-import Image from "next/image";
-import styles from "../page.module.css";
-import { getDictionary } from "@/lib/i18n";
+import { useTranslations } from "next-intl";
 
-export async function generateStaticParams() {
-    return [
-        { locale: 'pt' },
-        { locale: 'en' }
-    ]
+export const dynamic = 'force-static';
+
+export function generateMetadata() {
+    return {
+        title: 'Aldeia Shanetaxta',
+    };
 }
 
-export default async function Home({
-    params: { locale }
-}: {
-    params: { locale: string }
-}) {
-    const dict = await getDictionary(locale);
+export default function Home() {
+    const t = useTranslations('Home');
 
     return (
-        <div className={styles.page}>
-            <h1>{dict.welcome}</h1>
-            <p>{dict.appDescription}</p>
+        <div>
+            <h1>{t('welcome')}</h1>
+            <p>{t('appDescription')}</p>
         </div>
     );
 }

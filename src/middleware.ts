@@ -1,48 +1,16 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import createMiddleware from 'next-intl/middleware';
+import { locales, defaultLocale } from '../next-intl.config.js';
 
-const locales = ['pt', 'en']
-const defaultLocale = 'pt'
-
-function getLocale(request: NextRequest) {
-    // Check if there's a locale in the pathname
-    const pathname = request.nextUrl.pathname
-    const pathnameLocale = locales.find(
-        locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-    )
-
-    if (pathnameLocale) return pathnameLocale
-
-    // Check for locale in accept-language header
-    const acceptLanguage = request.headers.get('accept-language')
-    if (acceptLanguage) {
-        const headerLocale = acceptLanguage.split(',')[0].split('-')[0]
-        if (headerLocale === 'pt') return 'pt'
-        if (headerLocale === 'en') return 'en'
-    }
-
-    return defaultLocale
-}
-
-export function middleware(request: NextRequest) {
-    const pathname = request.nextUrl.pathname
-
-    // Check if the pathname starts with a locale
-    const pathnameIsMissingLocale = locales.every(
-        locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-    )
-
-    if (pathnameIsMissingLocale) {
-        const locale = getLocale(request)
-        return NextResponse.redirect(
-            new URL(`/${locale}${pathname === '/' ? '' : pathname}`, request.url)
-        )
-    }
-}
+export default createMiddleware({
+    locales,
+    defaultLocale,
+    localePrefix: 'as-needed'
+});
 
 export const config = {
     matcher: [
-        // Skip all internal paths (_next)
-        '/((?!_next|api|favicon.ico).*)',
-    ],
-}
+        '/',
+        '/(pt|en)/:path*',
+        '/((?!api|_next|_vercel|.*\\..*).*)'
+    ]
+};

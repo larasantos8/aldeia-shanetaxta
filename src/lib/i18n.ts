@@ -1,21 +1,17 @@
-import { headers } from 'next/headers';
+import { notFound } from 'next/navigation';
+import { getRequestConfig } from 'next-intl/server';
 
-const dictionaries = {
-    'en': () => import('@/messages/en.json').then((module: any) => module.default),
-    'pt': () => import('@/messages/pt.json').then((module: any) => module.default),
-};
+// Can be imported from a shared config
+export const locales = ['en', 'pt'];
+export const defaultLocale = 'pt';
 
-export type Locale = keyof typeof dictionaries;
+export default getRequestConfig(async ({ locale }) => {
+    // Validate that the incoming `locale` parameter is valid
+    if (!locale || !locales.includes(locale)) notFound();
 
-export const getDictionary = async (locale: string) => {
-    if (!locale || !(locale in dictionaries)) {
-        locale = 'pt'; // Fallback to default locale
-    }
-    return dictionaries[locale as Locale]();
-};
-
-export const getLocale = async () => {
-    const headersList = await headers();
-    const pathname = headersList.get('x-pathname') || '';
-    return (pathname.split('/')[1] || 'pt') as Locale;
-};
+    return {
+        locale: locale as string,
+        messages: (await import(`@/messages/${locale}.json`)).default,
+        timeZone: 'America/Sao_Paulo'
+    };
+});

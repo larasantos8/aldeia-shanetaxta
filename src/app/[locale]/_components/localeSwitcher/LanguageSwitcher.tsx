@@ -1,5 +1,8 @@
+"use client";
+
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
-import { getLocale, type Locale } from '@/lib/i18n';
+import { usePathname } from 'next/navigation';
 import styles from './LanguageSwitcher.module.css';
 
 const LOCALES = {
@@ -7,20 +10,27 @@ const LOCALES = {
     'en': 'English'
 } as const;
 
-export default async function LanguageSwitcher() {
-    const currentLocale = await getLocale();
+export default function LanguageSwitcher() {
+    const locale = useLocale();
+    const pathname = usePathname();
+
+    const pathnameWithoutLocale = pathname.replace(`/${locale}`, '');
 
     return (
         <div className={styles.switcher}>
-            {Object.entries(LOCALES).map(([locale, label]) => (
-                <Link
-                    key={locale}
-                    href={`/${locale}`}
-                    className={currentLocale === locale ? styles.active : ''}
-                >
-                    {label}
-                </Link>
-            ))}
+            {Object.entries(LOCALES).map(([lang, label]) => {
+                const isActive = locale === lang;
+                return (
+                    <Link
+                        key={lang}
+                        href={`/${lang}${pathnameWithoutLocale}`}
+                        className={isActive ? styles.active : ''}
+                        aria-current={isActive ? 'page' : undefined}
+                    >
+                        {label}
+                    </Link>
+                );
+            })}
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { getLocale } from "@/lib/i18n";
+import { NextIntlClientProvider } from "next-intl";
+import "../styles/globals.scss";
 import LanguageSwitcher from "@/app/[locale]/_components/localeSwitcher/LanguageSwitcher";
 
 const geistSans = Geist({
@@ -21,16 +21,20 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
-  const locale = await getLocale();
+  const messages = await import(`@/messages/${locale || 'pt'}.json`).catch(() => import('@/messages/pt.json'));
 
   return (
     <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <LanguageSwitcher />
-        {children}
+        <NextIntlClientProvider messages={messages.default} locale={locale || 'pt'}>
+          <LanguageSwitcher />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
