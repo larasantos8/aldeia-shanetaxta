@@ -1,11 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { redirect } from 'next/navigation'
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      Oi, tudo bem?
-      <p>Welcome to my Next.js application!</p>
-    </div>
-  );
+export default function RootPage() {
+  redirect('/pt-BR')
 }

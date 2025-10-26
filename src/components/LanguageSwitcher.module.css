@@ -1,0 +1,22 @@
+.switcher {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.switcher a {
+    text-decoration: none;
+    color: var(--foreground);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.switcher a:hover {
+    background-color: var(--gray-alpha-100);
+}
+
+.switcher a.active {
+    background-color: var(--gray-alpha-200);
+    font-weight: bold;
+}
