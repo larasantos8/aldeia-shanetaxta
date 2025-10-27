@@ -9,12 +9,12 @@ export function generateMetadata() {
 }
 
 export default function Home() {
-    const t = useTranslations('Home');
+    const t = useTranslations('HomePage');
 
     return (
         <div>
-            <h1>{t('welcome')}</h1>
-            <p>{t('appDescription')}</p>
+            <h1>{t('culture.title')}</h1>
+            <p>{t('culture.title')}</p>
         </div>
     );
 }

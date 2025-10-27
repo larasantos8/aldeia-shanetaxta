@@ -1,11 +1,12 @@
-@import "@/styles/styles/variables.scss";
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as m;
 
 .content {
-  @include content;
+  @include m.content;
 }
 
 .subtitle {
-  @include body-description;
+  @include m.body-description;
   font-weight: 700;
 }
 
@@ -16,7 +17,7 @@
   margin-bottom: 100px;
 
   p {
-    @include body-description;
+    @include m.body-description;
   }
 }
 

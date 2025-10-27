@@ -1,4 +1,4 @@
-@import './typography/typography.scss';
+@use './variables' as *;
 
 @mixin brand-title {
   @include heading3-brand;

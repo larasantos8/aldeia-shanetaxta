@@ -1,7 +1,7 @@
-@import '_fonts.scss';
-@import '_heading.scss';
-@import '_brand.scss';
-@import '_body.scss';
-@import '_subheader.scss';
-@import '_button.scss';
-@import '_caption.scss';
+@forward '_fonts';
+@forward '_heading';
+@forward '_brand';
+@forward '_body';
+@forward '_subheader';
+@forward '_button';
+@forward '_caption';

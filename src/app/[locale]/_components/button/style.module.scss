@@ -1,5 +1,5 @@
-@import '../../../styles/typography/typography.scss';
-@import '../../../styles/colors.scss';
+@use '../../../styles/typography/typography';
+@use '../../../styles/colors' as *;
 
 .button {
   @include general-button;
@@ -22,7 +22,7 @@
   &:disabled {
     text-decoration: none;
     cursor: default;
-    opacity: 0.6; 
+    opacity: 0.6;
   }
 
   &-contained {
@@ -30,12 +30,11 @@
     color: $white;
 
     &-icon {
-      filter: invert(91%) sepia(99%) saturate(34%) hue-rotate(256deg)
-        brightness(108%) contrast(100%);
+      filter: invert(91%) sepia(99%) saturate(34%) hue-rotate(256deg) brightness(108%) contrast(100%);
     }
 
     &:hover {
-      background-color: darken($uni, 10%); 
+      background-color: darken($uni, 10%);
     }
 
     &:disabled {
@@ -53,7 +52,7 @@
 
     &:hover {
       text-decoration-color: $uni;
-      color: darken($uni, 10%); 
+      color: darken($uni, 10%);
     }
   }
 }

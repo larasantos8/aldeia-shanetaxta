@@ -17,7 +17,11 @@ export function Link({ href, ...props }: Props) {
 
 export { usePathname };
 export { useRouter };
-export function redirect(path: string): void {
+export function useRedirect(): (path: string) => void {
     const locale = useLocale();
-    useRouter().push(`/${locale}${path}`);
+    const router = useRouter();
+
+    return (path: string) => {
+        router.push(`/${locale}${path}`);
+    };
 }

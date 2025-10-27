@@ -1,7 +1,8 @@
-@import "@/styles/variables.scss";
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as m;
 
 .content {
-  @include content;
+  @include m.content;
 }
 
 .description {
@@ -12,7 +13,7 @@
   margin-bottom: 100px;
 
   p {
-    @include body-description;
+    @include m.body-description;
     max-width: 789px;
   }
 }

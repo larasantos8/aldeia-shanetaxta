@@ -2,9 +2,14 @@
 import React, { useState } from 'react'
 import styles from './style.module.scss'
 import ArrowIcon from '../../../../../../public/assets/icons/navigation/expand-more.svg';
-import Image from 'next/image';
+import Image from "next/image";
 
-const AccordionItem = ({ title, children }) => {
+interface AccordionItemProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+const AccordionItem = ({ title, children }: AccordionItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -15,7 +20,16 @@ const AccordionItem = ({ title, children }) => {
     <div className={styles.item}>
       <div className={styles.header} onClick={toggleAccordion}>
         <h2 className={styles.title}>{title}</h2>
-        {isOpen ? '−' : <img className={styles.icon} src={ArrowIcon} alt="Expand Icon" style={{ width: "24px", height: "14px" }} />}
+        {isOpen ? '−' : <Image
+          className={styles.icon}
+          src={ArrowIcon}
+          alt="Expand Icon"
+          width={24}
+          height={14}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />}
       </div>
       {isOpen && <div className={styles.content}>{children}</div>}
     </div>

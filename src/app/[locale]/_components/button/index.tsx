@@ -1,7 +1,7 @@
 import React from 'react';
 import { IButton } from './types';
 import styles from './style.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 
 const Button = ({
   children,
@@ -27,7 +27,10 @@ const Button = ({
           alt="Back"
           width={24}
           height={24}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       )}
       {children}
       {hasIconRight && (
@@ -37,7 +40,10 @@ const Button = ({
           alt="Forward"
           width={24}
           height={24}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       )}
     </button>
   );

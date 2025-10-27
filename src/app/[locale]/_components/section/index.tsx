@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './style.module.scss'
-import Image from 'next/image';
+import Image from "next/image";
 import { SectionProps } from './types';
 
 const Section = ({ title, image, alt, className = '' }: SectionProps) => {
@@ -12,10 +12,13 @@ const Section = ({ title, image, alt, className = '' }: SectionProps) => {
         alt={alt}
         width={1012}
         height={569}
-        layout="responsive"
-      />
+        sizes="100vw"
+        style={{
+          width: "100%",
+          height: "auto"
+        }} />
     </div>
-  )
+  );
 }
 
 export default Section;

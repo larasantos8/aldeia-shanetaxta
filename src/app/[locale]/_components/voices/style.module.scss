@@ -1,4 +1,5 @@
-@import "../../../../styles/variables.scss";
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/typography/typography" as t;
 
 .voices {
   display: flex;
@@ -8,22 +9,22 @@
 }
 
 .title {
-  @include heading3-brand;
+  @include t.heading3-brand;
   color: $darkest;
 }
 
 .description {
-  @include body1;
+  @include t.body1;
   text-align: center;
 }
 
 @media (max-width: $breakpoint-tablet) {
   .title {
-    @include heading4-brand;
+    @include t.heading4-brand;
   }
 
   .description {
-    @include body1;
+    @include t.body1;
     text-align: left;
   }
 }
