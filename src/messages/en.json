@@ -29,6 +29,7 @@
     }
   },
   "HistoryPage": {
+    "alt": "Images depicting the history and daily life of the Shanenawa people in their village",
     "title": "GET TO KNOW THE HISTORY AND ORIGIN OF THE SHANENAWA PEOPLE",
     "description": {
       "paragraph1": "The history of the Shanenawa people is common to those experienced by most of the indigenous populations in Acre. At the beginning of the 20th century, they were victims of the rapid and violent occupation of the region due to the extraction of caucho and rubber.",
@@ -69,6 +70,7 @@
     }
   },
   "ResistancePage": {
+    "alt": "Images representing the struggle for land and resistance of the Shanenawa people",
     "title": "STRUGGLE FOR LAND AND RESISTANCE OF THE SHANENAWA PEOPLE",
     "description": {
       "paragraph1": "At the time they arrived to explore the Acrean lands, the rubber tappers came across a diversity of indigenous people in the region, but they were not interested in the linguistic and cultural distinctions they presented. With a few names, all indigenous populations were baptized, often making the same denomination fall on completely different groups.",

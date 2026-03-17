@@ -55,15 +55,40 @@
     }
   }
 
+  &__titleLink {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+    margin-bottom: 24px;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 40px;
+    }
+  }
+
   &__title {
     @include heading3-brand;
-    margin: 0 0 24px 0;
+    margin: 0;
     max-width: 90%;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+    cursor: pointer;
+
+    .heroCard__titleLink:hover & {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 8px;
+    }
 
     @media (min-width: $breakpoint-desktop) {
       @include heading1-brand;
-      margin-bottom: 40px;
       max-width: 800px;
+
+      .heroCard__titleLink:hover &{
+        text-decoration-thickness: 3px;
+        text-underline-offset: 12px;
+      }
     }
   }
 

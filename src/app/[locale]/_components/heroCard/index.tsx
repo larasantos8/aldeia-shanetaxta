@@ -37,7 +37,9 @@ const HeroCard = ({
         {subtitle && (
           <p className={styles.heroCard__subtitle}>{subtitle}</p>
         )}
-        <h1 className={styles.heroCard__title}>{title}</h1>
+        <Link href={ctaLink} className={styles.heroCard__titleLink}>
+          <h1 className={styles.heroCard__title}>{title}</h1>
+        </Link>
         <Link href={ctaLink} className={styles.heroCard__cta}>
           {ctaText}
           <Image

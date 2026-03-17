@@ -1,11 +1,12 @@
 import React from 'react'
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Section from '../_components/section'
 import Voices from '../_components/voices';
 import styles from './style.module.scss'
 
-const Project = () => {
-  const t = useTranslations("ProjectPage");
+const Project = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'ProjectPage' });
 
   return (
     <div className='wrapper'>

@@ -29,7 +29,7 @@
     }
   },
   "HistoryPage": {
-    "alt": "alterar depois",
+    "alt": "Imagens retratando a história e o cotidiano do povo Shanenawa na aldeia",
     "title": "CONHEÇA A HISTÓRIA E A ORIGEM DO POVO SHANENAWA",
     "description": {
       "paragraph1": "A história do povo Shanenawa é comum àquelas vividas por grande parte das populações indígenas no Acre. No início do século 20 foram vítimas da rápida e violenta ocupação da região em função do extrativismo de caucho e seringa.",
@@ -70,6 +70,7 @@
     }
   },
   "ResistancePage": {
+    "alt": "Imagens representando a luta pela terra e resistência do povo Shanenawa",
     "title": "LUTA PELA TERRA E RESISTÊNCIA DO POVO SHANENAWA",
     "description": {
       "paragraph1": "Na época em que chegaram para explorar as terras acreanas os seringueiros se depararam com uma diversidade de indígenas na região, mas não se interessavam pelas distinções lingüísticas e culturais que eles apresentavam. Com alguns poucos nomes foram batizadas todas as populações indígenas, fazendo muitas vezes uma mesma denominação recair sobre grupos completamente diferentes.",

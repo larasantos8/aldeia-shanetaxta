@@ -1,11 +1,12 @@
 import React from 'react'
 import Section from '../_components/section'
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import styles from './style.module.scss'
 import Voices from '../_components/voices';
 
-const Resistance = () => {
-  const t = useTranslations("ResistancePage");
+const Resistance = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'ResistancePage' });
 
   return (
     <div className='wrapper'>
