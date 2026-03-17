@@ -140,5 +140,19 @@
         "fullText": "The Shanenawa inhabit the north-central region of Acre, on the left bank of the Envira River, in the Municipality of Feijó. Regarding their origin, the literature suggests that these people did not inhabit the Envira region previously, although there are reports of traces of occupation of these lands in more remote times. According to older indigenous people, the Shanenawa migrated to this region from other areas located in the upper Gregório River, due to the Correrias (armed persecutions of indigenous peoples that accompanied the opening and installation of rubber plantations in Acre in the late 19th and early 20th centuries). The migrants would have occupied for some decades the territory covered by the upper courses of the Juruá, Purus and Envira rivers, the latter in the Municipality of Feijó, on the border with the South of the State of Amazonas."
       }
     ]
+  },
+  "Footer": {
+    "nav": {
+      "home": "Home",
+      "experiences": "Experiences",
+      "privacy": "Privacy",
+      "culture": "Culture",
+      "support": "Support the village",
+      "terms": "Terms",
+      "history": "History",
+      "contact": "Contact us",
+      "terms2": "Terms"
+    },
+    "stayConnected": "Stay connected"
   }
 }

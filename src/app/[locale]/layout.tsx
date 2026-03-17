@@ -3,6 +3,7 @@ import en from "@/messages/en.json";
 import { NextIntlClientProvider } from "next-intl";
 import { Metadata } from "next";
 import Header from "./_components/header";
+import Footer from "./_components/footer";
 import Voices from "./_components/voices";
 import Accordion from "./_components/accordion";
 import { getTranslations } from "next-intl/server";
@@ -74,6 +75,7 @@ export default async function LocaleLayout({
                     <Voices locale={locale} />
                     <Accordion items={accordionItems} />
                 </div>
+                <Footer />
             </main>
         </NextIntlClientProvider>
     );

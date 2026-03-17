@@ -1,0 +1,133 @@
+@import '@/styles/colors.scss';
+@import '@/styles/_breakpoints.scss';
+@import '@/styles/typography/_body.scss';
+@import '@/styles/typography/_button.scss';
+
+.footer {
+    background-color: $uni;
+    padding: 56px 76px;
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: 40px 24px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.logoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-shrink: 0;
+    width: fit-content;
+}
+
+.logo {
+    width: 271px;
+    height: 40px;
+
+    @media (max-width: $breakpoint-tablet) {
+        width: 200px;
+        height: auto;
+    }
+}
+
+.copyright {
+    @include body2;
+    color: $white;
+    margin: 0;
+
+    @media (max-width: $breakpoint-tablet) {
+        @include body2-mobile;
+    }
+}
+
+.navigation {
+    flex-shrink: 0;
+    width: fit-content;
+}
+
+.navList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+.navItem {
+    margin: 0;
+}
+
+.navLink {
+    @include general-button;
+    color: $white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.socialSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    width: fit-content;
+}
+
+.socialTitle {
+    @include body2;
+    color: $white;
+    margin: 0;
+
+    @media (max-width: $breakpoint-tablet) {
+        @include body2-mobile;
+    }
+}
+
+.socialLinks {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    img {
+        width: 24px !important;
+        height: 24px !important;
+        object-fit: contain;
+    }
+}
