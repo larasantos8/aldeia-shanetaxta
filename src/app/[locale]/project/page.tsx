@@ -21,7 +21,7 @@ const Project = async ({ params }: { params: Promise<{ locale: string }> }) => {
           <p>{t('description.paragraph6')}</p>
         </div>
       </div>
-      <Voices className={styles.content}/>
+      <Voices className={styles.content} locale={locale}/>
     </div>
   )
 }

@@ -1,12 +1,13 @@
 import React from 'react'
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Section from '../_components/section';
 import Voices from '../_components/voices';
 import styles from './style.module.scss'
 import Image from "next/image";
 
-const Spirituality = () => {
-  const t = useTranslations("SpiritualityPage");
+const Spirituality = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'SpiritualityPage' });
 
   return (
     <div className='wrapper'>
@@ -46,7 +47,7 @@ const Spirituality = () => {
           <p>{t('games.description.paragraph4')}</p>
         </div>
       </div>
-      <Voices className={styles.content}/>
+      <Voices className={styles.content} locale={locale}/>
     </div>
   );
 }

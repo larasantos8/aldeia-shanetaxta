@@ -1,6 +1,7 @@
 @use '@/styles/variables' as *; // inclui cores, tipografia e breakpoints via forward
 @use '@/styles/mixins' as m;
 @use '@/styles/breakpoints' as bp;
+@use '@/styles/typography/subheader' as typo;
 
 .header {
   position: fixed;
@@ -11,20 +12,62 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background-color: $uni;
   z-index: 1000;
+  transition: background-color 0.3s ease;
+
+  &.transparent {
+    background-color: transparent;
+  }
 }
 
 .brandWrapper {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
-.logo {
-  width: 162px;
-  height: 24px;
+.logoHorizontal {
+  width: 133px;
+  height: 32px;
+
+  .transparent & {
+    width: 162px;
+    height: 24px;
+  }
+}
+
+.logoVertical {
+  width: 56px;
+  height: 56px;
+}
+
+.pageTitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  @include typo.subheader2-mobile;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 200px);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.localeSwitcherWrapper {
+  display: none;
 }
 
 .menuWrapper {
@@ -35,6 +78,7 @@
   border: none;
   padding: 0;
   transition: opacity 0.3s ease;
+  flex-shrink: 0;
 
   &:hover {
     opacity: 0.8;
@@ -53,11 +97,36 @@
 @media (min-width: bp.$breakpoint-tablet) {
   .header {
     padding: 16px 76px;
+
+    &.transparent {
+      padding-top: 40px;
+      height: auto;
+      min-height: 168px; 
+    }
   }
 
-  .logo {
+  .logoHorizontal {
     width: 217px;
     height: 32px;
+  }
+
+  .logoVertical {
+    width: 80px;
+    height: 80px;
+
+    .transparent & {
+      width: 132px;
+      height: 128px;
+    }
+  }
+
+  .pageTitle {
+    @include typo.subheader1;
+    max-width: calc(100% - 500px);
+  }
+
+  .localeSwitcherWrapper {
+    display: block;
   }
 
   .menuIcon {

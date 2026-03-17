@@ -1,10 +1,15 @@
 import React from 'react'
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import styles from './style.module.scss'
 import Playlist from './playlist'
 
-const Voices = ({ className = ''}) => {
-  const t = useTranslations("Voices");
+interface VoicesProps {
+  className?: string;
+  locale: string;
+}
+
+const Voices = async ({ className = '', locale }: VoicesProps) => {
+  const t = await getTranslations({ locale, namespace: 'Voices' });
 
   return (
     <div className={styles.voices}>

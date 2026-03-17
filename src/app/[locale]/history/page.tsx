@@ -1,13 +1,12 @@
-'use client';
-
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Voices from '../_components/voices';
 import Section from '../_components/section';
 import styles from './style.module.scss';
 
-export default function History() {
-  const t = useTranslations('HistoryPage');
+const History = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'HistoryPage' });
 
   return (
     <div className='wrapper'>
@@ -53,7 +52,9 @@ export default function History() {
           </div>
         </div>
       </div>
-      <Voices className={styles.content} />
+      <Voices className={styles.content} locale={locale} />
     </div>
   )
 }
+
+export default History

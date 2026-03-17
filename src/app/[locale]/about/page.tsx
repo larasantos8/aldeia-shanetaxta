@@ -17,7 +17,7 @@ const About = async ({ params }: { params: Promise<{ locale: string }> }) => {
         <p>{t('description.paragraph3')}</p>
         <p className={styles.narrative}>{t('description.paragraph4')}</p>
       </div>
-        <Voices className={styles.content}/>
+        <Voices className={styles.content} locale={locale}/>
     </div>
   )
 }
