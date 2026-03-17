@@ -1,6 +1,7 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import HeroCard from "./_components/heroCard";
 
-export const dynamic = 'force-static';
+// export const dynamic = 'force-static'; // Comentado temporariamente para desenvolvimento
 
 export function generateMetadata() {
     return {
@@ -8,13 +9,20 @@ export function generateMetadata() {
     };
 }
 
-export default function Home() {
-    const t = useTranslations('HomePage');
-
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'HomePage' });
+    
     return (
         <div>
-            <h1>{t('culture.title')}</h1>
-            <p>{t('culture.title')}</p>
+            <HeroCard
+                image="/assets/images/about/image-01.png"
+                imageAlt={t('hero.imageAlt')}
+                subtitle={t('hero.subtitle')}
+                title={t('hero.title')}
+                ctaText={t('hero.ctaText')}
+                ctaLink="/about"
+            />
         </div>
     );
 }

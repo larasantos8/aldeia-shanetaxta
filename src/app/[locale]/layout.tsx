@@ -3,13 +3,13 @@ import en from "@/messages/en.json";
 import { NextIntlClientProvider } from "next-intl";
 import LanguageSwitcher from "./_components/localeSwitcher/LanguageSwitcher";
 import { Metadata } from "next";
+import Header from "./_components/header";
 
 const messagesMap = { pt, en } as const;
 
 type Locale = keyof typeof messagesMap;
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-    // We don't need the `locale` variable here; avoid unused var warning by not destructuring.
     return {
         title: "Aldeia Shanetaxta",
         description: "Aldeia Shanetaxta - Cultura e tradição",
@@ -21,7 +21,6 @@ export default async function LocaleLayout({
     params,
 }: {
     children: React.ReactNode;
-    // Next's LayoutProps may supply `params` as a Promise in some cases; accept both.
     params: { locale: string } | Promise<{ locale: string }>;
 }) {
     const resolvedParams = await params;
@@ -31,7 +30,8 @@ export default async function LocaleLayout({
     return (
         <NextIntlClientProvider messages={messages} locale={locale}>
             <main>
-                <LanguageSwitcher />
+                {/* <LanguageSwitcher /> */}
+                <Header />
                 {children}
             </main>
         </NextIntlClientProvider>
