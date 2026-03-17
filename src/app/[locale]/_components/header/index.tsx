@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Link } from '@/navigation';
+import Image from 'next/image';
 import styles from './style.module.scss';
 import Menu from '../menu';
 
@@ -20,10 +21,13 @@ const Header: React.FC = () => {
     <>
       <header className={styles.header}>
         <Link href="/" className={styles.brandWrapper}>
-          <img
+          <Image
             src="/assets/icons/brand/brand-horizontal.svg"
             alt="Logo"
             className={styles.logo}
+            width={200}
+            height={40}
+            priority
           />
         </Link>
         <button 
@@ -31,10 +35,12 @@ const Header: React.FC = () => {
           onClick={handleOpenMenu}
           aria-label="Abrir menu"
         >
-          <img
+          <Image
             src="/assets/icons/navigation/menu.svg"
             alt="Menu"
             className={styles.menuIcon}
+            width={32}
+            height={32}
           />
         </button>
       </header>

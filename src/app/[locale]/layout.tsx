@@ -9,7 +9,7 @@ const messagesMap = { pt, en } as const;
 type Locale = keyof typeof messagesMap;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-    const { locale } = await params;
+    await params;
     
     return {
         title: "Aldeia Shanetaxta",

@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
+import Image from 'next/image';
 import LanguageSwitcher from '../localeSwitcher';
 import styles from './style.module.scss';
 
@@ -43,10 +44,13 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
     <div className={styles.menuOverlay}>
       <div className={styles.menuContainer}>
         <Link href="/" className={styles.logoWrapper} onClick={onClose}>
-          <img
+          <Image
             src="/assets/icons/brand/brand-horizontal.svg"
             alt="Shane Tatxá Kawa"
             className={styles.logo}
+            width={200}
+            height={40}
+            priority
           />
         </Link>
 
@@ -58,9 +62,11 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             aria-label="Fechar menu"
           >
-            <img
+            <Image
               src="/assets/icons/navigation/close.svg"
               alt="Fechar"
+              width={32}
+              height={32}
             />
           </button>
         </div>
