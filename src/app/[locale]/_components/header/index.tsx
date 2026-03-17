@@ -24,7 +24,6 @@ const Header: React.FC = () => {
     setIsMounted(true);
   }, []);
 
-  // Remove o locale do pathname para obter a rota base
   const currentPath = pathname.replace(/^\/(pt|en)/, '') || '/';
   const isHomePage = currentPath === '/';
 
@@ -41,8 +40,6 @@ const Header: React.FC = () => {
 
   const pageTitle = pageTitles[currentPath];
 
-  // Define se deve usar o header transparente (apenas na home sem scroll)
-  // Usa isMounted para evitar erro de hidratação
   const isTransparent = isMounted && isHomePage && !scrolled;
   const useVerticalLogo = isMounted && isHomePage && !scrolled;
 

@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Image from 'next/image';
-import LanguageSwitcher from '../localeSwitcher';
 import styles from './style.module.scss';
 
 interface MenuProps {
@@ -55,8 +54,6 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
         </Link>
 
         <div className={styles.topActions}>
-          <LanguageSwitcher />
-          
           <button 
             className={styles.closeButton} 
             onClick={onClose}
@@ -69,10 +66,6 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
               height={32}
             />
           </button>
-        </div>
-
-        <div className={styles.mobileSwitcher}>
-          <LanguageSwitcher />
         </div>
 
         <nav className={styles.menuNav}>
