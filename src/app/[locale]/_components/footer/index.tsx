@@ -1,10 +1,14 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/navigation';
 import styles from './style.module.scss';
 
-export default function Footer() {
-    const t = useTranslations('Footer');
+interface FooterProps {
+    locale: string;
+}
+
+export default async function Footer({ locale }: FooterProps) {
+    const t = await getTranslations({ locale, namespace: 'Footer' });
     
     const currentYear = new Date().getFullYear();
 
@@ -22,17 +26,12 @@ export default function Footer() {
     const socialLinks = [
         {
             name: 'Instagram',
-            href: 'https://www.instagram.com',
+            href: 'https://www.instagram.com/aldeiashanetatxakaya/',
             icon: '/assets/icons/social/instagram.svg',
         },
-        // {
-        //     name: 'YouTube',
-        //     href: 'https://www.youtube.com',
-        //     icon: '/assets/icons/social/youtube.svg',
-        // },
         {
             name: 'Spotify',
-            href: 'https://www.spotify.com',
+            href: 'https://open.spotify.com/artist/7dsxRtDSfhTAXXs8dg001F?si=r-gLrgXrTy-EavxwAS3Azg',
             icon: '/assets/icons/social/spotify.svg',
         },
     ];

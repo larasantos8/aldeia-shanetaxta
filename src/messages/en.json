@@ -128,6 +128,7 @@
     "description": "Listen to the playlist with podcast episodes and songs of the Shanenawa people on Spotify."
   },
   "Accordion": {
+    "mapAlt": "Map of the state of Acre showing the location of the Shanenawa village near the municipality of Feijó",
     "items": [
       {
         "title": "CONTACT US",
@@ -150,8 +151,7 @@
       "support": "Support the village",
       "terms": "Terms",
       "history": "History",
-      "contact": "Contact us",
-      "terms2": "Terms"
+      "contact": "Contact us"
     },
     "stayConnected": "Stay connected"
   }

@@ -128,6 +128,7 @@
     "description": "Ouça a playlist com episódios de podcasts e cantos do povo Shanenawa no Spotify."
   },
   "Accordion": {
+    "mapAlt": "Mapa do estado do Acre mostrando a localização da aldeia Shanenawa próximo ao município de Feijó",
     "items": [
       {
         "title": "FALE CONOSCO",
@@ -150,8 +151,7 @@
       "support": "Apoie a aldeia",
       "terms": "Termos",
       "history": "História",
-      "contact": "Fale conosco",
-      "terms2": "Termos"
+      "contact": "Fale conosco"
     },
     "stayConnected": "Fique por dentro"
   }

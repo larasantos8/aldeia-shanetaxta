@@ -8,6 +8,7 @@ import Voices from "./_components/voices";
 import Accordion from "./_components/accordion";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import styles from "./accordion/style.module.scss";
 
 const messagesMap = { pt, en } as const;
 
@@ -43,24 +44,24 @@ export default async function LocaleLayout({
         {
             title: tAccordion('items.1.title'),
             content: (
-                <div>
+                <div className={styles.accordionContent}>
                     <p>{tAccordion('items.1.content')}</p>
                     <a 
                         href={tAccordion('items.1.link')} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        style={{ color: '#8B4513', textDecoration: 'underline', display: 'block', marginTop: '8px', marginBottom: '16px' }}
+                        className={styles.mapLink}
                     >
                         {tAccordion('items.1.link')}
                     </a>
                     <Image
                         src="/assets/images/acre.png"
-                        alt="Mapa do Acre"
+                        alt={tAccordion('mapAlt')}
                         width={1200}
                         height={800}
-                        style={{ width: '100%', height: 'auto', marginBottom: '16px' }}
+                        className={styles.mapImage}
                     />
-                    <p style={{ marginTop: '16px' }}>{tAccordion('items.1.fullText')}</p>
+                    <p className={styles.mapDescription}>{tAccordion('items.1.fullText')}</p>
                 </div>
             )
         }
@@ -75,7 +76,7 @@ export default async function LocaleLayout({
                     <Voices locale={locale} />
                     <Accordion items={accordionItems} />
                 </div>
-                <Footer />
+                <Footer locale={locale} />
             </main>
         </NextIntlClientProvider>
     );
