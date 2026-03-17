@@ -1,7 +1,6 @@
 import pt from "@/messages/pt.json";
 import en from "@/messages/en.json";
 import { NextIntlClientProvider } from "next-intl";
-import LanguageSwitcher from "./_components/localeSwitcher/LanguageSwitcher";
 import { Metadata } from "next";
 import Header from "./_components/header";
 
@@ -9,7 +8,9 @@ const messagesMap = { pt, en } as const;
 
 type Locale = keyof typeof messagesMap;
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    
     return {
         title: "Aldeia Shanetaxta",
         description: "Aldeia Shanetaxta - Cultura e tradição",
@@ -30,7 +31,6 @@ export default async function LocaleLayout({
     return (
         <NextIntlClientProvider messages={messages} locale={locale}>
             <main>
-                {/* <LanguageSwitcher /> */}
                 <Header />
                 {children}
             </main>
