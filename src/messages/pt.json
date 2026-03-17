@@ -126,5 +126,19 @@
   "Voices": {
     "title": "Vozes shanenawa",
     "description": "Ouça a playlist com episódios de podcasts e cantos do povo Shanenawa no Spotify."
+  },
+  "Accordion": {
+    "items": [
+      {
+        "title": "FALE CONOSCO",
+        "content": "Tem alguma dúvida sobre a aldeia? Deseja submeter um projeto ou está em busca de alguma vivência ou voluntariado?"
+      },
+      {
+        "title": "ONDE ESTAMOS?",
+        "content": "Estamos no estado do Acre, próximo ao município de Feijó.",
+        "link": "https://goo.gl/maps/AMeC3ipbbn2CNN2y7",
+        "fullText": "Os Shanenawa habitam a região centro-norte do Acre, à margem esquerda do rio Envira, no Município de Feijó. Sobre a sua origem, a literatura sugere que este povo não habitava a região do Envira anteriormente, embora haja relatos sobre vestígios de ocupação dessas terras em tempos mais remotos. Segundo índios mais velhos, os Shanenawa migraram para essa região, vindo de outras áreas situadas no alto rio Gregório, em virtude das Correrias (perseguições armadas aos povos indígenas que acompanharam a abertura e a instalação dos seringais no Acre, no final do século 19 e início do século 20). Os migrantes teriam ocupado por algumas décadas o território abrangido pelo alto do curso dos rios Juruá, Purus e Envira, este último no Município de Feijó, na divisa com o Sul do Estado do Amazonas."
+      }
+    ]
   }
 }

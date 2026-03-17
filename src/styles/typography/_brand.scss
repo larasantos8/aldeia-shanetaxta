@@ -29,3 +29,11 @@
   text-transform: uppercase;
   font-family: "Unbounded";
 }
+
+@mixin heading4-brand-mobile {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-family: "Unbounded";
+}

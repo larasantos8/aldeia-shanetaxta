@@ -1,6 +1,5 @@
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
-import Voices from '../_components/voices';
 import Section from '../_components/section';
 import styles from './style.module.scss';
 
@@ -52,7 +51,6 @@ const History = async ({ params }: { params: Promise<{ locale: string }> }) => {
           </div>
         </div>
       </div>
-      <Voices className={styles.content} locale={locale} />
     </div>
   )
 }

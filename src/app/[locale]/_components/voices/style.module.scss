@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  width: 100%;
 }
 
 .title {
@@ -16,6 +17,10 @@
 .description {
   @include t.body1;
   text-align: center;
+}
+
+.playlistWrapper {
+  width: 100%;
 }
 
 @media (max-width: $breakpoint-tablet) {

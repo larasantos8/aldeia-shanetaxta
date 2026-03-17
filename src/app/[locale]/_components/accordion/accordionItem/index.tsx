@@ -20,16 +20,13 @@ const AccordionItem = ({ title, children }: AccordionItemProps) => {
     <div className={styles.item}>
       <div className={styles.header} onClick={toggleAccordion}>
         <h2 className={styles.title}>{title}</h2>
-        {isOpen ? '−' : <Image
-          className={styles.icon}
+        <Image
+          className={`${styles.icon} ${isOpen ? styles.iconOpen : ''}`}
           src={ArrowIcon}
-          alt="Expand Icon"
+          alt={isOpen ? "Collapse Icon" : "Expand Icon"}
           width={24}
           height={14}
-          style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />}
+        />
       </div>
       {isOpen && <div className={styles.content}>{children}</div>}
     </div>

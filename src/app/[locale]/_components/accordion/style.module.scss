@@ -1,4 +1,11 @@
 @use "../../../../styles/variables" as *;
 
+.accordion {
+  margin-top: 80px;
+}
 
-@media (max-width: $breakpoint-tablet) {}
+@media (max-width: $breakpoint-tablet) {
+  .accordion {
+    margin-top: 60px;
+  }
+}

@@ -1,7 +1,6 @@
 import React from 'react'
 import { getTranslations } from 'next-intl/server';
 import Section from '../_components/section';
-import Voices from '../_components/voices';
 import styles from './style.module.scss'
 import Image from "next/image";
 
@@ -47,7 +46,6 @@ const Spirituality = async ({ params }: { params: Promise<{ locale: string }> })
           <p>{t('games.description.paragraph4')}</p>
         </div>
       </div>
-      <Voices className={styles.content} locale={locale}/>
     </div>
   );
 }

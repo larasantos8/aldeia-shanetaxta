@@ -8,20 +8,38 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 0 28px;
+  padding-bottom: 29px;
   border-bottom: 1px solid $border;
   cursor: pointer;
 }
 
 .title {
-  @include brand-title;
+  @include heading3-brand;
   color: $uni;
 }
 
 .icon {
-  filter: invert(21%) sepia(12%) saturate(7481%) hue-rotate(347deg) brightness(95%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(24%) sepia(28%) saturate(2064%) hue-rotate(349deg) brightness(93%) contrast(86%);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-.content {}
+.iconOpen {
+  transform: rotate(180deg);
+}
 
-@media (max-width: $breakpoint-tablet) {}
+.content {
+  @include body1;
+  color: $mediumDark;
+  padding: 40px 0;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .header {
+    padding-bottom: 22px;
+  }
+
+  .title {
+    @include heading4-brand-mobile;
+  }
+}

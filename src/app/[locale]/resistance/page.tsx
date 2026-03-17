@@ -2,7 +2,6 @@ import React from 'react'
 import Section from '../_components/section'
 import { getTranslations } from 'next-intl/server';
 import styles from './style.module.scss'
-import Voices from '../_components/voices';
 
 const Resistance = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
@@ -20,7 +19,6 @@ const Resistance = async ({ params }: { params: Promise<{ locale: string }> }) =
           <p>{t('description.paragraph5')}</p>
         </div>
       </div>
-      <Voices className={styles.content} locale={locale}/>
     </div>
   )
 }

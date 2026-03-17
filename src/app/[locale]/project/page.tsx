@@ -1,7 +1,6 @@
 import React from 'react'
 import { getTranslations } from 'next-intl/server';
 import Section from '../_components/section'
-import Voices from '../_components/voices';
 import styles from './style.module.scss'
 
 const Project = async ({ params }: { params: Promise<{ locale: string }> }) => {
@@ -21,7 +20,6 @@ const Project = async ({ params }: { params: Promise<{ locale: string }> }) => {
           <p>{t('description.paragraph6')}</p>
         </div>
       </div>
-      <Voices className={styles.content} locale={locale}/>
     </div>
   )
 }

@@ -17,7 +17,7 @@ const Voices = async ({ className = '', locale }: VoicesProps) => {
       <p className={styles.description}>
         {t('description')}
       </p>
-      <div className={className}>
+      <div className={`${styles.playlistWrapper} ${className}`}>
         <Playlist />
       </div>
     </div>
