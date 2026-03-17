@@ -1,6 +1,6 @@
-@import '../../../../styles/colors.scss';
-@import '../../../../styles/typography/_subheader.scss';
-@import '../../../../styles/_breakpoints.scss';
+@use '../../../../styles/colors' as *;
+@use '../../../../styles/typography/subheader' as *;
+@use '../../../../styles/breakpoints' as *;
 
 .switcher {
     display: inline-flex;
