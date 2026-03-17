@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import styles from './style.module.scss';
+import LanguageSwitcher from '../localeSwitcher';
 
 interface MenuProps {
   isOpen: boolean;
@@ -42,18 +43,18 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
   return (
     <div className={styles.menuOverlay}>
       <div className={styles.menuContainer}>
-        <Link href="/" className={styles.logoWrapper} onClick={onClose}>
-          <Image
-            src="/assets/icons/brand/brand-horizontal.svg"
-            alt="Shane Tatxá Kawa"
-            className={styles.logo}
-            width={200}
-            height={40}
-            priority
-          />
-        </Link>
+        <header className={styles.menuHeader}>
+          <Link href="/" className={styles.logoWrapper} onClick={onClose}>
+            <Image
+              src="/assets/icons/brand/brand-horizontal.svg"
+              alt="Shane Tatxá Kawa"
+              className={styles.logo}
+              width={162}
+              height={24}
+              priority
+            />
+          </Link>
 
-        <div className={styles.topActions}>
           <button 
             className={styles.closeButton} 
             onClick={onClose}
@@ -66,6 +67,10 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
               height={32}
             />
           </button>
+        </header>
+
+        <div className={styles.mobileSwitcher}>
+          <LanguageSwitcher />
         </div>
 
         <nav className={styles.menuNav}>

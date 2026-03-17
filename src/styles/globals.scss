@@ -90,6 +90,9 @@ a {
 .wrapper {
   max-width: 1128px;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 80px 16px 0 16px;
+
+  @media (min-width: 768px) {
+    padding: 96px 76px 0 76px;
+  }
 }

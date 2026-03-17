@@ -20,6 +20,10 @@
   &.transparent {
     background-color: transparent;
   }
+
+  &.centered {
+    align-items: center;
+  }
 }
 
 .brandWrapper {
@@ -40,8 +44,13 @@
 }
 
 .logoVertical {
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
+
+  .transparent & {
+    width: 56px;
+    height: 56px;
+  }
 }
 
 .pageTitle {

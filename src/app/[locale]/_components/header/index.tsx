@@ -8,6 +8,7 @@ import styles from './style.module.scss';
 import Menu from '../menu';
 import LocaleSwitcher from '../localeSwitcher';
 import { useScrolled } from '@/hooks/useScrolled';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 interface PageTitles {
   [key: string]: string;
@@ -18,6 +19,7 @@ const Header: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
   const scrolled = useScrolled();
+  const isMobile = useIsMobile();
   const t = useTranslations('Menu');
 
   useEffect(() => {
@@ -41,7 +43,7 @@ const Header: React.FC = () => {
   const pageTitle = pageTitles[currentPath];
 
   const isTransparent = isMounted && isHomePage && !scrolled;
-  const useVerticalLogo = isMounted && isHomePage && !scrolled;
+  const useVerticalLogo = isMounted && (isMobile || (isHomePage && !scrolled));
 
   const handleOpenMenu = () => {
     setIsMenuOpen(true);
@@ -53,7 +55,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className={`${styles.header} ${isTransparent ? styles.transparent : ''}`}>
+      <header className={`${styles.header} ${isTransparent ? styles.transparent : ''} ${useVerticalLogo ? styles.centered : ''}`}>
         <Link href="/" className={styles.brandWrapper}>
           <Image
             src={useVerticalLogo ? "/assets/icons/brand/brand-vertical.svg" : "/assets/icons/brand/brand-horizontal.svg"}
