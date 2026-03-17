@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
+import LanguageSwitcher from '../localeSwitcher';
 import styles from './style.module.scss';
 
 interface MenuProps {
@@ -49,16 +50,24 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
           />
         </Link>
 
-        <button 
-          className={styles.closeButton} 
-          onClick={onClose}
-          aria-label="Fechar menu"
-        >
-          <img
-            src="/assets/icons/navigation/close.svg"
-            alt="Fechar"
-          />
-        </button>
+        <div className={styles.topActions}>
+          <LanguageSwitcher />
+          
+          <button 
+            className={styles.closeButton} 
+            onClick={onClose}
+            aria-label="Fechar menu"
+          >
+            <img
+              src="/assets/icons/navigation/close.svg"
+              alt="Fechar"
+            />
+          </button>
+        </div>
+
+        <div className={styles.mobileSwitcher}>
+          <LanguageSwitcher />
+        </div>
 
         <nav className={styles.menuNav}>
           <ul className={styles.menuList}>

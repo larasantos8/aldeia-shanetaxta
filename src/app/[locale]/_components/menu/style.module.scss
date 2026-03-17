@@ -59,20 +59,33 @@
   }
 }
 
-.closeButton {
+.topActions {
   position: absolute;
   top: 16px;
   right: 78px;
+  display: none;
+  align-items: center;
+  gap: 24px;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+  }
+}
+
+.mobileSwitcher {
+  margin-bottom: 32px;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+.closeButton {
   background: none;
   border: none;
   cursor: pointer;
   padding: 8px;
-  display: none;
   transition: opacity 0.3s ease;
-
-  @media (min-width: $breakpoint-desktop) {
-    display: block;
-  }
 
   &:hover {
     opacity: 0.7;

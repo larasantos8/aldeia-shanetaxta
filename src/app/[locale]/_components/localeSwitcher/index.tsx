@@ -3,11 +3,11 @@
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import styles from './LanguageSwitcher.module.css';
+import styles from './style.module.scss';
 
 const LOCALES = {
-    'pt': 'Português',
-    'en': 'English'
+    'pt': 'PT',
+    'en': 'EN'
 } as const;
 
 export default function LanguageSwitcher() {
@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
                     <Link
                         key={lang}
                         href={`/${lang}${pathnameWithoutLocale}`}
-                        className={isActive ? styles.active : ''}
+                        className={`${styles.languageButton} ${isActive ? styles.active : ''}`}
                         aria-current={isActive ? 'page' : undefined}
                     >
                         {label}
