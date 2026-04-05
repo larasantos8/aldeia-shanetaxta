@@ -8,7 +8,7 @@ import Voices from "./_components/voices";
 import Accordion from "./_components/accordion";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import styles from "./accordion/style.module.scss";
+import styles from "./_components/accordion/style.module.scss";
 
 const messagesMap = { pt, en } as const;
 
@@ -16,7 +16,7 @@ type Locale = keyof typeof messagesMap;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     await params;
-    
+
     return {
         title: "Aldeia Shanetaxta",
         description: "Aldeia Shanetaxta - Cultura e tradição",
@@ -33,7 +33,7 @@ export default async function LocaleLayout({
     const resolvedParams = await params;
     const locale = resolvedParams.locale;
     const messages = messagesMap[locale as Locale] || pt;
-    
+
     const tAccordion = await getTranslations({ locale, namespace: 'Accordion' });
 
     const accordionItems = [
@@ -46,9 +46,9 @@ export default async function LocaleLayout({
             content: (
                 <div className={styles.accordionContent}>
                     <p>{tAccordion('items.1.content')}</p>
-                    <a 
-                        href={tAccordion('items.1.link')} 
-                        target="_blank" 
+                    <a
+                        href={tAccordion('items.1.link')}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className={styles.mapLink}
                     >

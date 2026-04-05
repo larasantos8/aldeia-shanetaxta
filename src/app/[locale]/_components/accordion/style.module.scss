@@ -9,3 +9,31 @@
     margin-top: 60px;
   }
 }
+
+.accordionContent {
+  p {
+    margin: 0;
+  }
+}
+
+.mapLink {
+  color: #8B4513;
+  text-decoration: underline;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 16px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.mapImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.mapDescription {
+  margin-top: 16px;
+}

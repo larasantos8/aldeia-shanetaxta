@@ -12,17 +12,14 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   background-color: $uni;
   z-index: 1000;
   transition: background-color 0.3s ease;
 
   &.transparent {
     background-color: transparent;
-  }
-
-  &.centered {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 

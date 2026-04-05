@@ -1,7 +1,4 @@
-@import '@/styles/colors.scss';
-@import '@/styles/_breakpoints.scss';
-@import '@/styles/typography/_body.scss';
-@import '@/styles/typography/_button.scss';
+@use '@/styles/variables' as *;
 
 .footer {
     background-color: $uni;
