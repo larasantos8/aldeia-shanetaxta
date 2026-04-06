@@ -1,0 +1,111 @@
+@use '../../../../styles/breakpoints' as *;
+@use '../../../../styles/colors' as *;
+@use '../../../../styles/typography/typography' as *;
+
+.cultureCards {
+  padding: 64px 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 0;
+  }
+
+  &__grid {
+    display: flex;
+    gap: 8px;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      height: auto;
+      gap: 8px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__card {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+    transition: flex 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (max-width: $breakpoint-tablet) {
+      flex: 0 0 80vw;
+      scroll-snap-align: start;
+    }
+
+    &:hover {
+      flex: 1.8;
+    }
+
+    &--dimmed {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #00000033;
+        z-index: 2;
+        pointer-events: none;
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
+
+  &__imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+    .cultureCards__card:hover & {
+      transform: scale(1.04);
+    }
+  }
+
+  &__label {
+    position: relative;
+    z-index: 1;
+    background-color: $darkest;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    padding: 24px 16px;
+    flex-shrink: 0;
+
+    @media (max-width: $breakpoint-tablet) {
+      height: 86px;
+    }
+
+    span {
+      @include subheader1-mobile;
+      color: $white;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      @media (max-width: $breakpoint-tablet) {
+        @include subheader2-mobile;
+      }
+    }
+  }
+}

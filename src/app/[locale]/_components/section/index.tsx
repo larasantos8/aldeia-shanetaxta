@@ -3,20 +3,24 @@ import styles from './style.module.scss'
 import Image from "next/image";
 import { SectionProps } from './types';
 
-const Section = ({ title, image, alt, className = '' }: SectionProps) => {
+const Section = ({ title, image, alt, className = '', children }: SectionProps) => {
   return (
     <div className={`${styles.section} ${className}`}>
-      <h1 className={styles.title}>{title}</h1>
-      <Image
-        src={image}
-        alt={alt}
-        width={1012}
-        height={569}
-        sizes="100vw"
-        style={{
-          width: "100%",
-          height: "auto"
-        }} />
+      {title && <h1 className={styles.title}>{title}</h1>}
+      {children ? (
+        children
+      ) : image && alt ? (
+        <Image
+          src={image}
+          alt={alt}
+          width={1012}
+          height={569}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto"
+          }} />
+      ) : null}
     </div>
   );
 }
