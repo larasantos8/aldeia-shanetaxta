@@ -96,3 +96,12 @@ a {
     padding: 0;
   }
 }
+
+.page-wrapper {
+  @extend .wrapper;
+  padding-top: 96px;
+
+  @media (max-width: 768px) {
+    padding-top: 80px;
+  }
+}

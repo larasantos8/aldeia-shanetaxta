@@ -8,7 +8,7 @@ const History = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const t = await getTranslations({ locale, namespace: 'HistoryPage' });
 
   return (
-    <div className='wrapper'>
+    <div className='page-wrapper'>
       <Section image='/assets/images/history/image-01.png' alt={t('alt')} title={t('title')} />
       <div className={styles.content}>
         <div className={styles.description}>

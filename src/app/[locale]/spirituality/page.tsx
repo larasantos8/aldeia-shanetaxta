@@ -9,8 +9,8 @@ const Spirituality = async ({ params }: { params: Promise<{ locale: string }> })
   const t = await getTranslations({ locale, namespace: 'SpiritualityPage' });
 
   return (
-    <div className='wrapper'>
-      <Section image='/assets/images/spirituality/image-01.png' alt={t('alt1')} title={t('title')}/>
+    <div className='page-wrapper'>
+      <Section image='/assets/images/spirituality/image-01.png' alt={t('alt1')} title={t('title')} />
       <div className={styles.content}>
         <div className={styles.description}>
           <p>{t('description.paragraph1')}</p>
@@ -28,16 +28,16 @@ const Spirituality = async ({ params }: { params: Promise<{ locale: string }> })
                 width: "100%",
                 height: "auto"
               }} />
-              <Image
-                src='/assets/images/spirituality/image-03.png'
-                alt={t('alt3')}
-                width={356}
-                height={266}
-                sizes="100vw"
-                style={{
-                  width: "100%",
-                  height: "auto"
-                }} />
+            <Image
+              src='/assets/images/spirituality/image-03.png'
+              alt={t('alt3')}
+              width={356}
+              height={266}
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
           </div>
           <h1 className={styles.title}>{t('games.title')}</h1>
           <p>{t('games.description.paragraph1')}</p>

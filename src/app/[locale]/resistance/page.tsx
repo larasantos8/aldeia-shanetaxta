@@ -8,8 +8,8 @@ const Resistance = async ({ params }: { params: Promise<{ locale: string }> }) =
   const t = await getTranslations({ locale, namespace: 'ResistancePage' });
 
   return (
-    <div className='wrapper'>
-      <Section image='/assets/images/resistance/image-01.png' alt={t('alt')} title={t('title')}/>
+    <div className='page-wrapper'>
+      <Section image='/assets/images/resistance/image-01.png' alt={t('alt')} title={t('title')} />
       <div className={styles.content}>
         <div className={styles.description}>
           <p>{t('description.paragraph1')}</p>
