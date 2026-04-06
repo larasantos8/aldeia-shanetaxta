@@ -44,6 +44,10 @@
 
     &:hover {
       flex: 1.8;
+
+      @media (max-width: $breakpoint-tablet) {
+        flex: 0 0 80vw;
+      }
     }
 
     &--dimmed {
@@ -77,6 +81,10 @@
 
     .cultureCards__card:hover & {
       transform: scale(1.04);
+
+      @media (max-width: $breakpoint-tablet) {
+        transform: none;
+      }
     }
   }
 

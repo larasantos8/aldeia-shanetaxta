@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './style.module.scss';
 import Section from '../section';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 interface CultureCard {
   image: string;
@@ -20,6 +21,7 @@ interface CultureCardsProps {
 
 const CultureCards = ({ title, cards }: CultureCardsProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   return (
     <div className="wrapper">
@@ -29,12 +31,12 @@ const CultureCards = ({ title, cards }: CultureCardsProps) => {
             <Link
               key={index}
               href={card.href}
-              className={`${styles.cultureCards__card} ${hoveredIndex !== null && hoveredIndex !== index
+              className={`${styles.cultureCards__card} ${!isMobile && hoveredIndex !== null && hoveredIndex !== index
                 ? styles['cultureCards__card--dimmed']
                 : ''
                 }`}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              onMouseEnter={() => !isMobile && setHoveredIndex(index)}
+              onMouseLeave={() => !isMobile && setHoveredIndex(null)}
             >
               <div className={styles.cultureCards__imageWrapper}>
                 <Image
