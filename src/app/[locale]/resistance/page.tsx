@@ -9,7 +9,7 @@ const Resistance = async ({ params }: { params: Promise<{ locale: string }> }) =
 
   return (
     <div className='page-wrapper'>
-      <Section image='/assets/images/resistance/image-01.png' alt={t('alt')} title={t('title')} />
+      <Section image='/assets/images/resistance/image-01.png' alt={t('alt')} title={t('title')} priority />
       <div className={styles.content}>
         <div className={styles.description}>
           <p>{t('description.paragraph1')}</p>

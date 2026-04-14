@@ -29,7 +29,6 @@ const Header: React.FC = () => {
   const currentPath = pathname.replace(/^\/(pt|en)/, '') || '/';
   const isHomePage = currentPath === '/';
 
-  // Mapeamento de rotas para títulos
   const pageTitles: PageTitles = {
     '/about': t('about'),
     '/experiences': t('experiences'),
@@ -37,7 +36,6 @@ const Header: React.FC = () => {
     '/resistance': t('resistance'),
     '/spirituality': t('spirituality'),
     '/project': t('project'),
-    '/gallery': t('gallery'),
   };
 
   const pageTitle = pageTitles[currentPath];

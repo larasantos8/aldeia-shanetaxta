@@ -10,7 +10,7 @@ const Spirituality = async ({ params }: { params: Promise<{ locale: string }> })
 
   return (
     <div className='page-wrapper'>
-      <Section image='/assets/images/spirituality/image-01.png' alt={t('alt1')} title={t('title')} />
+      <Section image='/assets/images/spirituality/image-01.png' alt={t('alt1')} title={t('title')} priority />
       <div className={styles.content}>
         <div className={styles.description}>
           <p>{t('description.paragraph1')}</p>

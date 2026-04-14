@@ -23,7 +23,6 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
     { label: t('resistance'), href: '/resistance' },
     { label: t('spirituality'), href: '/spirituality' },
     { label: t('project'), href: '/project' },
-    { label: t('gallery'), href: '/gallery' },
   ];
 
   useEffect(() => {
@@ -42,6 +41,16 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className={styles.menuOverlay}>
+      <Image
+        src="/assets/images/image-menu.png"
+        alt=""
+        fill
+        priority
+        className={styles.menuBgImage}
+        sizes="100vw"
+        quality={75}
+      />
+      <div className={styles.menuOverlayDim} aria-hidden="true" />
       <div className={styles.menuContainer}>
         <header className={styles.menuHeader}>
           <Link href="/" className={styles.logoWrapper} onClick={onClose}>

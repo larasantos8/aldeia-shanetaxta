@@ -9,7 +9,7 @@ const Project = async ({ params }: { params: Promise<{ locale: string }> }) => {
 
   return (
     <div className='page-wrapper'>
-      <Section image='/assets/images/home/banners/image-03.png' alt={t('alt1')} title={t('title')} />
+      <Section image='/assets/images/home/banners/image-03.png' alt={t('alt1')} title={t('title')} priority />
       <div className={styles.content}>
         <div className={styles.description}>
           <p>{t('description.paragraph1')}</p>

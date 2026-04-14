@@ -1,7 +1,8 @@
 export interface SectionProps {
-  title: string;
+  title?: string;
   image?: string;
   alt?: string;
   className?: string;
   children?: React.ReactNode;
+  priority?: boolean;
 }

@@ -19,7 +19,7 @@
     }
   },
   "AboutPage": {
-    "title": "Shane Tatxa Kaya, the True Root of Blue Bird", 
+    "title": "Shane Tatxa Kaya, the True Root of Blue Bird",
     "alt": "Indigenous person with face paint",
     "description": {
       "paragraph1": "The new village Shane Tatxa Kaya, already known as the Village of Shanenawa Women, came as a mission offered by spirituality to the three sister leaders of the community. Pekãshaya Shanenawa, Sapuani Shanenawa, and Mukani Shanenawa received from their parents the hereditary teachings, traditionally kept by men, so that they would always have the necessary autonomy to continue the work of cultural strengthening and protecting the rights of the women of their people.",
@@ -120,8 +120,7 @@
     "history": "History",
     "resistance": "Resistance and struggle",
     "spirituality": "Spirituality",
-    "project": "Heart of the village project",
-    "gallery": "Photo gallery"
+    "project": "Heart of the village project"
   },
   "Voices": {
     "title": "Shanenawa Voices",
